@@ -1,2 +1,2 @@
 # Roomy
-If you are searching for a room!
+search for a room!
