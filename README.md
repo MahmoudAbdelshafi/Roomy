@@ -1,4 +1,4 @@
 # Roomy
 search for a room!
-![](/images/Start.png)
+< img src="images/Start.png" height="100" >
 ![](/images/Home.png)
