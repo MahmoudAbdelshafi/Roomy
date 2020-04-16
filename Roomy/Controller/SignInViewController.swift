@@ -7,11 +7,16 @@
 //
 
 import UIKit
+protocol DissmissView {
+    func dismiss()
+}
 
 class SignInViewController: UIViewController {
-
     
-    //Outlets
+    
+    
+    
+    //MARK:- Outlets
     
     @IBOutlet weak var userNameTextField: UITextField!
     
@@ -19,31 +24,97 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     
-    
+    var auth_Key:Auth?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LogIn.signIn(email: "mahmoud@gmail.com", password: "12345678") {auth,error in
+            self.auth_Key = auth
+            
+            DispatchQueue.main.async {
+                
+                
+                self.performSegue(withIdentifier: "logInToHome", sender: auth)
+            }
+        }
         buttonShape()
         userNameTextField.underlined()
         passwordTextField.underlined()
+        self.hideKeyboardWhenTappedAround()
         
+    }
     
+    // MARK:- IBAction
+    @IBAction func signInPressed(_ sender: Any) {
+        let username = userNameTextField.text
+        let password = passwordTextField.text
+        
+        // check for empty fields
+        
+        switch (username != nil) || (password != nil) {
+        //Show Alert
+        case username!.isEmpty && password!.isEmpty: displayAlertMessage(userMessage: "Enter Username and Password")
+        case username?.isEmpty: displayAlertMessage(userMessage: "Enter Username")
+        case password?.isEmpty: displayAlertMessage(userMessage: "Enter Password")
+            
+            
+        default: LogIn.signIn(email: username!, password: password!, completionHandler: self.handelLogIn(sender:error:))
+        
+        
+            return
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    //MARK: - handel logIn
+    func handelLogIn(sender:Auth?,error:Error?){
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "logInToHome", sender: sender)
+        }
     }
     
     
-    
+    //MARK: - SignIn Button Customization
     func buttonShape(){
         
-        //ButtonShape
         signInButton.layer.borderColor = signInButton.backgroundColor?.cgColor
-              signInButton.layer.borderWidth  = 1.0
-               signInButton.layer.cornerRadius = 30.0
-        
-       
+        signInButton.layer.borderWidth  = 1.0
+        signInButton.layer.cornerRadius = 30.0
         
     }
-
+    
+    
+    //MARK:- Alert Message
+    private func displayAlertMessage(userMessage:String){
+        let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        myAlert.addAction(okAction)
+        self.present(myAlert,animated: true)
+    }
+    
+    
+    
+    
+    //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "logInToHome"
+        {
+            let vc = segue.destination as? HomeViewController
+            vc?.auth = sender as? Auth
+        }
+    }
+    
 }
 
 
@@ -52,39 +123,3 @@ class SignInViewController: UIViewController {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-extension UITextField{
-    
-    func underlined(){
-        let border = CALayer()
-        let width = CGFloat(1.0)
-        border.borderColor = UIColor.lightGray.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height + 0.0 - width, width:  self.frame.size.width + 30.0 , height: self.frame.size.height)
-        border.borderWidth = width
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
-    }
-    
-    
-}
