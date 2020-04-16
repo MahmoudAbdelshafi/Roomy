@@ -29,7 +29,7 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        helper()
         LogIn.signIn(email: "mahmoud@gmail.com", password: "12345678") {auth,error in
             self.auth_Key = auth
             
@@ -39,12 +39,20 @@ class SignInViewController: UIViewController {
                 self.performSegue(withIdentifier: "logInToHome", sender: auth)
             }
         }
+       
+    }
+    
+    
+    //MARK:- Helpers
+    func helper(){
         buttonShape()
         userNameTextField.underlined()
         passwordTextField.underlined()
         self.hideKeyboardWhenTappedAround()
         
     }
+    
+    
     
     // MARK:- IBAction
     @IBAction func signInPressed(_ sender: Any) {

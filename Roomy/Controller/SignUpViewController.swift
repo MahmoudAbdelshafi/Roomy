@@ -12,7 +12,7 @@ class SignUpViewController: UIViewController {
 
     
     //MARK:- IBOutlets
-       
+    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,13 +23,18 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        helper()
+    }
+    
+    
+    //MARK:- Helpers
+    func helper(){
         buttonShape()
         EmailTextField.underlined()
         userNameTextField.underlined()
         passwordTextField.underlined()
         hideKeyboardWhenTappedAround()
     }
-    
     
     
     //MARK:-IBActions
