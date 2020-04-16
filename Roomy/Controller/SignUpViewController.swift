@@ -27,7 +27,7 @@ class SignUpViewController: UIViewController {
         EmailTextField.underlined()
         userNameTextField.underlined()
         passwordTextField.underlined()
-        dismissKeyboard()
+        hideKeyboardWhenTappedAround()
     }
     
     

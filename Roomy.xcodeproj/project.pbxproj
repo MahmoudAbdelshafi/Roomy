@@ -15,13 +15,13 @@
 		390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AA40A2415C3470072BEC6 /* SignInViewController.swift */; };
 		391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4450243B7A2A00EDFE59 /* LogInModel.swift */; };
 		391A4456243BB59600EDFE59 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4455243BB59600EDFE59 /* Rooms.swift */; };
+		397051DA244897BD00836D94 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397051D9244897BD00836D94 /* Extentions.swift */; };
 		3977BA1A24165002008096AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1924165002008096AD /* HomeViewController.swift */; };
 		3977BA1C24165D97008096AD /* calibri in Resources */ = {isa = PBXBuildFile; fileRef = 3977BA1B24165D96008096AD /* calibri */; };
 		3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1F241662D0008096AD /* HomeTableViewCell.swift */; };
 		39782DFD243BFDC9007113A0 /* RoomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39782DFC243BFDC9007113A0 /* RoomsModel.swift */; };
 		39B484E3243DE3870083008B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B484E2243DE3860083008B /* ViewController.swift */; };
 		39B484E5243DE8050083008B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B484E4243DE8050083008B /* SignUpViewController.swift */; };
-		39B484E8243DEFE50083008B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B484E7243DEFE50083008B /* Extensions.swift */; };
 		39E8A44F2416F32200F9CD72 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E8A44E2416F32200F9CD72 /* ListingViewController.swift */; };
 		9963ED221D37508D0758EF51 /* Pods_Roomy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80985155CA9DB5BE5CD9FF8D /* Pods_Roomy.framework */; };
 /* End PBXBuildFile section */
@@ -37,13 +37,13 @@
 		390AA40A2415C3470072BEC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		391A4450243B7A2A00EDFE59 /* LogInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		391A4455243BB59600EDFE59 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		397051D9244897BD00836D94 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		3977BA1924165002008096AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3977BA1B24165D96008096AD /* calibri */ = {isa = PBXFileReference; lastKnownFileType = folder; path = calibri; sourceTree = "<group>"; };
 		3977BA1F241662D0008096AD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		39782DFC243BFDC9007113A0 /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
 		39B484E2243DE3860083008B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39B484E4243DE8050083008B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		39B484E7243DEFE50083008B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		39E8A44E2416F32200F9CD72 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
 		6834143E48299DE75C5AE4B3 /* Pods-Roomy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Roomy.release.xcconfig"; path = "Target Support Files/Pods-Roomy/Pods-Roomy.release.xcconfig"; sourceTree = "<group>"; };
 		80985155CA9DB5BE5CD9FF8D /* Pods_Roomy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Roomy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +93,7 @@
 		390AA3EF2415A0150072BEC6 /* Roomy */ = {
 			isa = PBXGroup;
 			children = (
+				39B484E6243DEFB40083008B /* Extensions */,
 				390AA4062415C2850072BEC6 /* Model */,
 				390AA4042415C2680072BEC6 /* View */,
 				390AA4092415C2C60072BEC6 /* Controller */,
@@ -127,7 +128,6 @@
 				3977BA1924165002008096AD /* HomeViewController.swift */,
 				39E8A44E2416F32200F9CD72 /* ListingViewController.swift */,
 				39B484E4243DE8050083008B /* SignUpViewController.swift */,
-				39B484E6243DEFB40083008B /* Extensions */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,7 +172,7 @@
 		39B484E6243DEFB40083008B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				39B484E7243DEFE50083008B /* Extensions.swift */,
+				397051D9244897BD00836D94 /* Extentions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,12 +304,12 @@
 				39B484E5243DE8050083008B /* SignUpViewController.swift in Sources */,
 				39B484E3243DE3870083008B /* ViewController.swift in Sources */,
 				3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */,
-				39B484E8243DEFE50083008B /* Extensions.swift in Sources */,
 				391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */,
 				391A4456243BB59600EDFE59 /* Rooms.swift in Sources */,
 				39782DFD243BFDC9007113A0 /* RoomsModel.swift in Sources */,
 				390AA3F12415A0150072BEC6 /* AppDelegate.swift in Sources */,
 				39E8A44F2416F32200F9CD72 /* ListingViewController.swift in Sources */,
+				397051DA244897BD00836D94 /* Extentions.swift in Sources */,
 				390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */,
 				3977BA1A24165002008096AD /* HomeViewController.swift in Sources */,
 				390A17A52434DA6100B79F27 /* LogIn.swift in Sources */,
