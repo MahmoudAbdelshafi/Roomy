@@ -1,7 +1,7 @@
 # Roomy
 
 
-#search for a room!
+# Buy a whole room in just one tap
 
 
 
