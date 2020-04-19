@@ -9,7 +9,7 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     
     //MARK:- IBOutlets
     
@@ -18,12 +18,49 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
-   
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         helper()
+    }
+    
+    
+    
+    
+    
+    //MARK:-IBActions
+    @IBAction func signUpPressed(_ sender: Any) {
+        let email = EmailTextField.text
+        let username = userNameTextField.text
+        let password = passwordTextField.text
+        // check for empty fields
+        if email!.isEmpty || username!.isEmpty || password!.isEmpty{
+            displayAlertMessage(userMessage: "All fields are required")
+        }else{
+            //SignUp
+        }
+        
+        
+        
+    }
+    
+    
+    
+    @IBAction func logInPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    
+    //MARK: - SignUp Button Customization
+    func buttonShape(){
+        signUpButton.layer.borderColor = signUpButton.backgroundColor?.cgColor
+        signUpButton.layer.borderWidth  = 1.0
+        signUpButton.layer.cornerRadius = 30.0
     }
     
     
@@ -37,36 +74,6 @@ class SignUpViewController: UIViewController {
     }
     
     
-    //MARK:-IBActions
-    @IBAction func signUpPressed(_ sender: Any) {
-        let email = EmailTextField.text
-        let username = userNameTextField.text
-        let password = passwordTextField.text
-               // check for empty fields
-        if email!.isEmpty || username!.isEmpty || password!.isEmpty{
-        displayAlertMessage(userMessage: "All fields are required")
-        }else{
-            //SignUp
-        }
-               
-               
-                
-  }
-               
-               
-        
-    
-    
-    
-    
-    
-    //MARK: - SignUp Button Customization
-     func buttonShape(){
-         signUpButton.layer.borderColor = signUpButton.backgroundColor?.cgColor
-         signUpButton.layer.borderWidth  = 1.0
-         signUpButton.layer.cornerRadius = 30.0
-     }
-    
     //MARK:- Alert Message
     private func displayAlertMessage(userMessage:String){
         let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
@@ -75,5 +82,5 @@ class SignUpViewController: UIViewController {
         myAlert.addAction(okAction)
         self.present(myAlert,animated: true)
     }
-
+    
 }

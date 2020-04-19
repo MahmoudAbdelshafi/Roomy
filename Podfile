@@ -8,4 +8,5 @@ target 'Roomy' do
   # Pods for Roomy
 
  pod 'SDWebImage'
+ pod 'SVProgressHUD'
 end

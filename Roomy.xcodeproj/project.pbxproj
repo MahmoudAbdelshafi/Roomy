@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390375FA244C94F500202C39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390375F9244C94F500202C39 /* Extensions.swift */; };
 		390A17A52434DA6100B79F27 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A17A42434DA6100B79F27 /* LogIn.swift */; };
 		390AA3F12415A0150072BEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AA3F02415A0150072BEC6 /* AppDelegate.swift */; };
 		390AA3F82415A0150072BEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390AA3F62415A0150072BEC6 /* Main.storyboard */; };
@@ -15,7 +16,7 @@
 		390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AA40A2415C3470072BEC6 /* SignInViewController.swift */; };
 		391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4450243B7A2A00EDFE59 /* LogInModel.swift */; };
 		391A4456243BB59600EDFE59 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4455243BB59600EDFE59 /* Rooms.swift */; };
-		397051DA244897BD00836D94 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397051D9244897BD00836D94 /* Extentions.swift */; };
+		393338042448D98400070602 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393338032448D98400070602 /* SignUp.swift */; };
 		3977BA1A24165002008096AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1924165002008096AD /* HomeViewController.swift */; };
 		3977BA1C24165D97008096AD /* calibri in Resources */ = {isa = PBXBuildFile; fileRef = 3977BA1B24165D96008096AD /* calibri */; };
 		3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1F241662D0008096AD /* HomeTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		390375F9244C94F500202C39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		390A17A42434DA6100B79F27 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		390AA3ED2415A0150072BEC6 /* Roomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		390AA3F02415A0150072BEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +39,7 @@
 		390AA40A2415C3470072BEC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		391A4450243B7A2A00EDFE59 /* LogInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		391A4455243BB59600EDFE59 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
-		397051D9244897BD00836D94 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		393338032448D98400070602 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		3977BA1924165002008096AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3977BA1B24165D96008096AD /* calibri */ = {isa = PBXFileReference; lastKnownFileType = folder; path = calibri; sourceTree = "<group>"; };
 		3977BA1F241662D0008096AD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				390A17A42434DA6100B79F27 /* LogIn.swift */,
+				393338032448D98400070602 /* SignUp.swift */,
 				391A4455243BB59600EDFE59 /* Rooms.swift */,
 			);
 			path = Networking;
@@ -172,7 +175,7 @@
 		39B484E6243DEFB40083008B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				397051D9244897BD00836D94 /* Extentions.swift */,
+				390375F9244C94F500202C39 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -309,9 +312,10 @@
 				39782DFD243BFDC9007113A0 /* RoomsModel.swift in Sources */,
 				390AA3F12415A0150072BEC6 /* AppDelegate.swift in Sources */,
 				39E8A44F2416F32200F9CD72 /* ListingViewController.swift in Sources */,
-				397051DA244897BD00836D94 /* Extentions.swift in Sources */,
+				390375FA244C94F500202C39 /* Extensions.swift in Sources */,
 				390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */,
 				3977BA1A24165002008096AD /* HomeViewController.swift in Sources */,
+				393338042448D98400070602 /* SignUp.swift in Sources */,
 				390A17A52434DA6100B79F27 /* LogIn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

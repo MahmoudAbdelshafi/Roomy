@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
+
 class Rooms {
     
-    
-    //MARK:- Request Rooms Data
+    //MARK:- Rooms Data Request 
     class func requestAllRooms(_ auth_token:String,completionHandler: @escaping ([RoomsModel]?,Error?) -> Void){
         let url = URL(string: "https://roomy-application.herokuapp.com/rooms")
         var request = URLRequest(url: url!)

@@ -16,11 +16,10 @@ class HomeViewController: UIViewController {
     
     
     //MARK: - IBOutlets
-    @IBOutlet weak var homeCollectionView: UICollectionView!
     @IBOutlet weak var homeTableView: UITableView!
     
-   //MARK:- Properties
-    
+  
+    //MARK:- Properties
     var auth:Auth?
     var rooms:[RoomsModel]?
     var room:RoomsModel?
@@ -29,9 +28,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if auth != nil{
         Rooms.requestAllRooms(auth!.token, completionHandler: handelRoomsRequest(data:error:))
-      
+        }
     }
     
     
@@ -65,22 +64,13 @@ class HomeViewController: UIViewController {
 
 
 
-//MARK:- TableView
+//MARK:- TableView Deleget Methods
 
-extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
-        return rooms?.count ?? 50
-        
-        
-    }
+extension HomeViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
-        
-        if rooms != nil {
+                if rooms != nil {
             tableCell.priceLabel.text = self.rooms![indexPath.row].price
             tableCell.descriptionLabel.text = self.rooms![indexPath.row].title
             tableCell.placeLabel.text = self.rooms![indexPath.row].place
@@ -89,14 +79,18 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
                 tableCell.firstImg.sd_setImage(with: URL(string: self.rooms![indexPath.item].image!))
             }
         }
-        
         return  tableCell
     }
     
+    
+        // Cell hieght method
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
-        
-    }
+            }
+    
+    
+    // Selected row method
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if rooms != nil{
@@ -110,5 +104,15 @@ extension HomeViewController: UITableViewDelegate,UITableViewDataSource{
 
 
 
+//MARK:- TableView DataSource Methods
 
-
+extension HomeViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        return rooms?.count ?? 0
+        
+        
+    }
+    
+}
