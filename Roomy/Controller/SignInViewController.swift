@@ -34,20 +34,11 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // displayAlertMessage("hhhhhh")
+        
         
         helper()
-        //        LogIn.signIn(email: "mahmoud@gmail.com", password: "12345678") {auth,error in
-        //            self.auth_Key = auth
-        //
-        //            DispatchQueue.main.async {
-        //
-        //
-        //                self.performSegue(withIdentifier: "logInToHome", sender: auth)
-        //            }
-        //        }
-        
-    }
+
+        }
     
     
     
@@ -57,8 +48,7 @@ class SignInViewController: UIViewController {
         let username = userNameTextField.text
         let password = passwordTextField.text
         
-        // check for empty fields
-        
+        // checking for empty fields
         switch (username != nil) || (password != nil) {
         //Show Alert
         case username!.isEmpty && password!.isEmpty: displayAlertMessage("Enter Username and Password")
@@ -69,16 +59,14 @@ class SignInViewController: UIViewController {
         default:SVProgressHUD.show(); LogIn.signIn(email: username!, password: password!, completionHandler: self.handelLogIn(sender:error:))
             
         }
-        
-        
-        
-        
-        
     }
+    
+    
     
     //MARK: - handel logIn
     func handelLogIn(sender:Auth?,error:Error?){
-        if error != nil{
+        
+        if sender != nil{
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "logInToHome", sender: sender)
@@ -86,7 +74,7 @@ class SignInViewController: UIViewController {
         }else{
             SVProgressHUD.dismiss()
             DispatchQueue.main.async {
-                self.displayAlertMessage("Wrong Email or Password")
+                self.displayAlertMessage("Wrong Email or Password!")
             }
         }
     }
@@ -100,19 +88,17 @@ class SignInViewController: UIViewController {
     }
     
     
+    
+    
     //MARK:- Alert Message
     private func displayAlertMessage(_ userMessage:String){
-        
-        
-        
         let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
-        
         let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
         myAlert.addAction(okAction)
-        
         present(myAlert, animated: true, completion: nil)
-        
     }
+    
+    
     
     
     //MARK:- Helpers
@@ -121,8 +107,9 @@ class SignInViewController: UIViewController {
         userNameTextField.underlined()
         passwordTextField.underlined()
         self.hideKeyboardWhenTappedAround()
-        
     }
+    
+    
     
     //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
     
@@ -134,9 +121,6 @@ class SignInViewController: UIViewController {
             vc?.auth = sender as? Auth
         }
     }
-    
-    
-    
     
 }
 
