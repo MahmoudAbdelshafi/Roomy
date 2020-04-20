@@ -63,7 +63,7 @@ class SignInViewController: UIViewController {
     
     
     
-    //MARK: - handel logIn
+    //MARK: - handel logIn Request
     func handelLogIn(sender:Auth?,error:Error?){
         
         if sender != nil{
