@@ -21,7 +21,7 @@ class ListingViewController: UIViewController {
         
         buttonShape()
         if room != nil{
-            descriptionLabel.text = room?.purpleDescription
+            descriptionLabel.text = room?.roomDescription
         }
         
         

@@ -1,22 +1,32 @@
 PODS:
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
   - SDWebImage (5.2.5):
     - SDWebImage/Core (= 5.2.5)
   - SDWebImage/Core (5.2.5)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - RealmSwift (= 4.4.0)
   - SDWebImage
   - SVProgressHUD
 
 SPEC REPOS:
   trunk:
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   SDWebImage: 4eabf2fa6695c95c47724214417a9c036c965e4a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 93b7fa0a39387190e9fe2ff2302919ac31d95076
+PODFILE CHECKSUM: 2aef70cf287323813257cef85019c3ac1eebbb89
 
 COCOAPODS: 1.9.1

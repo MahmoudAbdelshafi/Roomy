@@ -1,25 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Calibri.ttf">
+            <string>Calibri</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="SJ7-3G-yI6">
+                                <rect key="frame" x="0.0" y="476" width="414" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="5gV-Jc-Hof"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder copy" translatesAutoresizingMaskIntoConstraints="NO" id="mfm-m8-d4d">
+                                <rect key="frame" x="169.5" y="81" width="75" height="75"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roomy" translatesAutoresizingMaskIntoConstraints="NO" id="6EW-al-GYt">
+                                <rect key="frame" x="120.5" y="184" width="173" height="53"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your roomate today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2c-OE-oaU">
+                                <rect key="frame" x="96.5" y="242" width="221" height="22"/>
+                                <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6EW-al-GYt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DA4-9K-hXZ"/>
+                            <constraint firstItem="mfm-m8-d4d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="LZC-NJ-5Ho"/>
+                            <constraint firstAttribute="trailing" secondItem="SJ7-3G-yI6" secondAttribute="trailing" id="Mej-FJ-1i4"/>
+                            <constraint firstItem="6EW-al-GYt" firstAttribute="top" secondItem="mfm-m8-d4d" secondAttribute="bottom" constant="28" id="PLs-PZ-XeK"/>
+                            <constraint firstItem="y2c-OE-oaU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YNF-jQ-Vif"/>
+                            <constraint firstItem="mfm-m8-d4d" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hXr-Jb-1Bc"/>
+                            <constraint firstItem="y2c-OE-oaU" firstAttribute="top" secondItem="6EW-al-GYt" secondAttribute="bottom" constant="5" id="i53-SD-1Dj"/>
+                            <constraint firstItem="SJ7-3G-yI6" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lVT-Fp-eHq"/>
+                            <constraint firstAttribute="bottom" secondItem="SJ7-3G-yI6" secondAttribute="bottom" id="lsj-J1-ZMb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Rectangle" width="375" height="468.5"/>
+        <image name="Roomy" width="173" height="53"/>
+        <image name="placeholder copy" width="75" height="75"/>
+    </resources>
 </document>

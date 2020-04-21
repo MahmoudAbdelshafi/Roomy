@@ -9,4 +9,5 @@ target 'Roomy' do
 
  pod 'SDWebImage'
  pod 'SVProgressHUD'
+ pod 'RealmSwift', '4.4.0'
 end

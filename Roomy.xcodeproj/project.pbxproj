@@ -16,11 +16,14 @@
 		390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AA40A2415C3470072BEC6 /* SignInViewController.swift */; };
 		391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4450243B7A2A00EDFE59 /* LogInModel.swift */; };
 		391A4456243BB59600EDFE59 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4455243BB59600EDFE59 /* Rooms.swift */; };
+		391BE7BB244F12DE00631D38 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */; };
 		393338042448D98400070602 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393338032448D98400070602 /* SignUp.swift */; };
+		3943F297244F574600FB56FD /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943F296244F574600FB56FD /* RealmManger.swift */; };
 		3977BA1A24165002008096AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1924165002008096AD /* HomeViewController.swift */; };
 		3977BA1C24165D97008096AD /* calibri in Resources */ = {isa = PBXBuildFile; fileRef = 3977BA1B24165D96008096AD /* calibri */; };
 		3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1F241662D0008096AD /* HomeTableViewCell.swift */; };
 		39782DFD243BFDC9007113A0 /* RoomsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39782DFC243BFDC9007113A0 /* RoomsModel.swift */; };
+		39A119CF244DE824004FC1D7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A119CE244DE824004FC1D7 /* Router.swift */; };
 		39B484E3243DE3870083008B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B484E2243DE3860083008B /* ViewController.swift */; };
 		39B484E5243DE8050083008B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B484E4243DE8050083008B /* SignUpViewController.swift */; };
 		39E8A44F2416F32200F9CD72 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E8A44E2416F32200F9CD72 /* ListingViewController.swift */; };
@@ -39,11 +42,14 @@
 		390AA40A2415C3470072BEC6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		391A4450243B7A2A00EDFE59 /* LogInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		391A4455243BB59600EDFE59 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		393338032448D98400070602 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		3943F296244F574600FB56FD /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		3977BA1924165002008096AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3977BA1B24165D96008096AD /* calibri */ = {isa = PBXFileReference; lastKnownFileType = folder; path = calibri; sourceTree = "<group>"; };
 		3977BA1F241662D0008096AD /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		39782DFC243BFDC9007113A0 /* RoomsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsModel.swift; sourceTree = "<group>"; };
+		39A119CE244DE824004FC1D7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		39B484E2243DE3860083008B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		39B484E4243DE8050083008B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		39E8A44E2416F32200F9CD72 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +101,9 @@
 		390AA3EF2415A0150072BEC6 /* Roomy */ = {
 			isa = PBXGroup;
 			children = (
-				39B484E6243DEFB40083008B /* Extensions */,
+				391BE7B6244E41F100631D38 /* Utilities */,
+				391BE7B5244E35D700631D38 /* DatabaseLayer */,
+				39782DFE243CEB55007113A0 /* Networking */,
 				390AA4062415C2850072BEC6 /* Model */,
 				390AA4042415C2680072BEC6 /* View */,
 				390AA4092415C2C60072BEC6 /* Controller */,
@@ -116,8 +124,8 @@
 		390AA4062415C2850072BEC6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				391A4452243BB1F000EDFE59 /* Data */,
-				39782DFE243CEB55007113A0 /* Networking */,
+				391A4450243B7A2A00EDFE59 /* LogInModel.swift */,
+				39782DFC243BFDC9007113A0 /* RoomsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,19 +142,35 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		391A4452243BB1F000EDFE59 /* Data */ = {
+		391BE7B5244E35D700631D38 /* DatabaseLayer */ = {
 			isa = PBXGroup;
 			children = (
-				391A4450243B7A2A00EDFE59 /* LogInModel.swift */,
-				39782DFC243BFDC9007113A0 /* RoomsModel.swift */,
+				3943F296244F574600FB56FD /* RealmManger.swift */,
 			);
-			path = Data;
+			path = DatabaseLayer;
+			sourceTree = "<group>";
+		};
+		391BE7B6244E41F100631D38 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				39B484E6243DEFB40083008B /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		391BE7B7244F125A00631D38 /* HomeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3977BA1F241662D0008096AD /* HomeTableViewCell.swift */,
+				391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableViewCell;
 			sourceTree = "<group>";
 		};
 		3952C45B2434AA4800E6E470 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				3977BA1F241662D0008096AD /* HomeTableViewCell.swift */,
+				391BE7B7244F125A00631D38 /* HomeTableViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -165,6 +189,7 @@
 		39782DFE243CEB55007113A0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				39A119CE244DE824004FC1D7 /* Router.swift */,
 				390A17A42434DA6100B79F27 /* LogIn.swift */,
 				393338032448D98400070602 /* SignUp.swift */,
 				391A4455243BB59600EDFE59 /* Rooms.swift */,
@@ -251,6 +276,7 @@
 				390AA3FD2415A0180072BEC6 /* LaunchScreen.storyboard in Resources */,
 				3977BA1C24165D97008096AD /* calibri in Resources */,
 				390AA3FA2415A0180072BEC6 /* Assets.xcassets in Resources */,
+				391BE7BB244F12DE00631D38 /* HomeTableViewCell.xib in Resources */,
 				390AA3F82415A0150072BEC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,12 +334,14 @@
 				39B484E3243DE3870083008B /* ViewController.swift in Sources */,
 				3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */,
 				391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */,
+				3943F297244F574600FB56FD /* RealmManger.swift in Sources */,
 				391A4456243BB59600EDFE59 /* Rooms.swift in Sources */,
 				39782DFD243BFDC9007113A0 /* RoomsModel.swift in Sources */,
 				390AA3F12415A0150072BEC6 /* AppDelegate.swift in Sources */,
 				39E8A44F2416F32200F9CD72 /* ListingViewController.swift in Sources */,
 				390375FA244C94F500202C39 /* Extensions.swift in Sources */,
 				390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */,
+				39A119CF244DE824004FC1D7 /* Router.swift in Sources */,
 				3977BA1A24165002008096AD /* HomeViewController.swift in Sources */,
 				393338042448D98400070602 /* SignUp.swift in Sources */,
 				390A17A52434DA6100B79F27 /* LogIn.swift in Sources */,

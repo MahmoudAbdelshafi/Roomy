@@ -10,11 +10,6 @@ import UIKit
 import SVProgressHUD
 
 
-
-
-
-
-
 class SignInViewController: UIViewController {
     
     //MARK:- Properties
@@ -34,16 +29,17 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         helper()
-
-        }
+    }
     
     
     
     
     // MARK:- IBActions
+    @IBAction func signUpPressed(_ sender: Any) {
+        performSegue(withIdentifier: "signUp", sender: nil)
+    }
+    
     @IBAction func signInPressed(_ sender: Any) {
         let username = userNameTextField.text
         let password = passwordTextField.text
@@ -63,53 +59,6 @@ class SignInViewController: UIViewController {
     
     
     
-    //MARK: - handel logIn Request
-    func handelLogIn(sender:Auth?,error:Error?){
-        
-        if sender != nil{
-            SVProgressHUD.dismiss()
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "logInToHome", sender: sender)
-            }
-        }else{
-            SVProgressHUD.dismiss()
-            DispatchQueue.main.async {
-                self.displayAlertMessage("Wrong Email or Password!")
-            }
-        }
-    }
-    
-    
-    //MARK: - SignIn Button Customization
-    func buttonShape(){
-        signInButton.layer.borderColor = signInButton.backgroundColor?.cgColor
-        signInButton.layer.borderWidth  = 1.0
-        signInButton.layer.cornerRadius = 30.0
-    }
-    
-    
-    
-    
-    //MARK:- Alert Message
-    private func displayAlertMessage(_ userMessage:String){
-        let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        myAlert.addAction(okAction)
-        present(myAlert, animated: true, completion: nil)
-    }
-    
-    
-    
-    
-    //MARK:- Helpers
-    func helper(){
-        buttonShape()
-        userNameTextField.underlined()
-        passwordTextField.underlined()
-        self.hideKeyboardWhenTappedAround()
-    }
-    
-    
     
     //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
     
@@ -127,6 +76,60 @@ class SignInViewController: UIViewController {
 
 
 
+
+
+
+
+
+//MARK:- Private Functions
+extension SignInViewController{
+    
+    //MARK:- Helpers
+    private func helper(){
+        buttonShape()
+        userNameTextField.underlined()
+        passwordTextField.underlined()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    
+    //MARK: - SignIn Button Customization
+    private func buttonShape(){
+        signInButton.layer.borderColor = signInButton.backgroundColor?.cgColor
+        signInButton.layer.borderWidth  = 1.0
+        signInButton.layer.cornerRadius = 30.0
+    }
+    
+    
+    
+    //MARK: - handel logIn
+    private func handelLogIn(sender:Auth?,error:Error?){
+        if sender != nil{
+            SVProgressHUD.dismiss()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "logInToHome", sender: sender)
+            }
+        }else{
+            SVProgressHUD.dismiss()
+            DispatchQueue.main.async {
+                self.displayAlertMessage("Wrong Email or Password!")
+            }
+        }
+    }
+    
+    
+    
+    //MARK:- Alert Message
+    private func displayAlertMessage(_ userMessage:String){
+        let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        myAlert.addAction(okAction)
+        present(myAlert, animated: true, completion: nil)
+    }
+    
+    
+    
+}
 
 
 
