@@ -17,6 +17,7 @@
 		391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4450243B7A2A00EDFE59 /* LogInModel.swift */; };
 		391A4456243BB59600EDFE59 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4455243BB59600EDFE59 /* Rooms.swift */; };
 		391BE7BB244F12DE00631D38 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */; };
+		3932ED61245099D9006F8F6E /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3932ED60245099D9006F8F6E /* SignUpModel.swift */; };
 		393338042448D98400070602 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393338032448D98400070602 /* SignUp.swift */; };
 		3943F297244F574600FB56FD /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943F296244F574600FB56FD /* RealmManger.swift */; };
 		3977BA1A24165002008096AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1924165002008096AD /* HomeViewController.swift */; };
@@ -43,6 +44,7 @@
 		391A4450243B7A2A00EDFE59 /* LogInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModel.swift; sourceTree = "<group>"; };
 		391A4455243BB59600EDFE59 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		3932ED60245099D9006F8F6E /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		393338032448D98400070602 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		3943F296244F574600FB56FD /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		3977BA1924165002008096AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				391A4450243B7A2A00EDFE59 /* LogInModel.swift */,
 				39782DFC243BFDC9007113A0 /* RoomsModel.swift */,
+				3932ED60245099D9006F8F6E /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				39B484E5243DE8050083008B /* SignUpViewController.swift in Sources */,
 				39B484E3243DE3870083008B /* ViewController.swift in Sources */,
 				3977BA20241662D0008096AD /* HomeTableViewCell.swift in Sources */,
+				3932ED61245099D9006F8F6E /* SignUpModel.swift in Sources */,
 				391A4451243B7A2A00EDFE59 /* LogInModel.swift in Sources */,
 				3943F297244F574600FB56FD /* RealmManger.swift in Sources */,
 				391A4456243BB59600EDFE59 /* Rooms.swift in Sources */,

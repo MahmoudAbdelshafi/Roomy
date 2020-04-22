@@ -13,7 +13,7 @@ class Rooms {
     
     //MARK:- Rooms Data Request 
     class func requestAllRooms(_ auth_token:String,completionHandler: @escaping ([RoomsModel]?,Error?) -> Void){
-        let request = try! Router.Endpoint.getRooms.asURLRequest(nil, auth_token)
+        let request = try! Router.Endpoint.getRooms.asURLRequest(httpBodyForSignIn: nil, httpBodyForSignUp: nil, auth_token)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (data, response, error) in
             guard let data = data else {return}

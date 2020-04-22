@@ -15,7 +15,7 @@ class LogIn {
     //MARK: - SignIn Request
     class func signIn(email:String,password:String , completionHandler: @escaping (Auth?,Error?) -> Void){
         let logIn = LogInModel(email: email, password: password)
-        let request = try! Router.Endpoint.signIn.asURLRequest(logIn, nil)
+        let request = try! Router.Endpoint.signIn.asURLRequest(httpBodyForSignIn: logIn, httpBodyForSignUp: nil, nil)
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {

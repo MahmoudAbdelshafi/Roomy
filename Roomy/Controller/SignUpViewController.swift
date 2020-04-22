@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SignUpViewController: UIViewController {
+    
+    //MARK:- Prrperties
+  
     
     
     //MARK:- IBOutlets
@@ -40,9 +44,9 @@ class SignUpViewController: UIViewController {
             displayAlertMessage(userMessage: "All fields are required")
         }else{
             //SignUp
+            SVProgressHUD.show()
+            SignUp.signUp(username!, email!, password!, completionHandler: handelSignUp(sender:error:))
         }
-        
-        
         
     }
     
@@ -56,8 +60,31 @@ class SignUpViewController: UIViewController {
     
     
     
+    //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+       {
+           if segue.identifier == "signUpToHome"
+           {
+               let vc = segue.destination as? HomeViewController
+               vc?.auth = sender as? Auth
+           }
+       }
+    
+}
+
+
+
+
+
+
+
+//MARK:- Private
+
+extension SignUpViewController{
+    
+    
     //MARK: - SignUp Button Customization
-    func buttonShape(){
+    private func buttonShape(){
         signUpButton.layer.borderColor = signUpButton.backgroundColor?.cgColor
         signUpButton.layer.borderWidth  = 1.0
         signUpButton.layer.cornerRadius = 30.0
@@ -65,7 +92,7 @@ class SignUpViewController: UIViewController {
     
     
     //MARK:- Helpers
-    func helper(){
+    private func helper(){
         buttonShape()
         EmailTextField.underlined()
         userNameTextField.underlined()
@@ -83,4 +110,19 @@ class SignUpViewController: UIViewController {
         self.present(myAlert,animated: true)
     }
     
+    
+    //MARK: - handel logIn
+      private func handelSignUp(sender:Auth?,error:Error?){
+          if sender != nil{
+              SVProgressHUD.dismiss()
+              DispatchQueue.main.async {
+                  self.performSegue(withIdentifier: "signUpToHome", sender: sender)
+              }
+          }else{
+              SVProgressHUD.dismiss()
+              DispatchQueue.main.async {
+                self.displayAlertMessage(userMessage: "Please write a valid Email!")
+              }
+          }
+      }
 }

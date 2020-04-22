@@ -13,6 +13,7 @@ class Router{
     enum Endpoint:String{
         
         case signIn
+        case signUp
         case getRooms
         
         
@@ -24,6 +25,8 @@ class Router{
             case .getRooms:
                 return URL(string:"https://roomy-application.herokuapp.com/rooms")!
                 
+            case .signUp:
+                return URL(string: "https://roomy-application.herokuapp.com/signup")!
             }
         }
         
@@ -44,23 +47,26 @@ class Router{
             switch self {
             case .getRooms: return .get
             case .signIn: return .post
+            case .signUp: return .post
                 
             }
         }
         
         
         //MARK:- URLRequest Method
-        func asURLRequest(_ httpBody:LogInModel?, _ auth:String?) throws -> URLRequest{ 
+        func asURLRequest(httpBodyForSignIn:LogInModel?,httpBodyForSignUp:SignUpModel?, _ auth:String?) throws -> URLRequest{
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = method.value
             switch self {
-            case .signIn: urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                
+            case .signIn,.signUp: urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            
             case .getRooms: urlRequest.setValue("\(auth!)", forHTTPHeaderField: "Authorization")
             }
             switch self {
-            case .signIn: urlRequest.httpBody = try! JSONEncoder().encode(httpBody)
+            case .signIn: urlRequest.httpBody = try! JSONEncoder().encode(httpBodyForSignIn)
             return urlRequest
+            case .signUp: urlRequest.httpBody = try! JSONEncoder().encode(httpBodyForSignUp)
+                return urlRequest
             case .getRooms:
                 return urlRequest
             }
