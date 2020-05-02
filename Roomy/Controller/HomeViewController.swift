@@ -83,10 +83,10 @@ extension HomeViewController: UITableViewDataSource{
             tableCell.priceLabel.text = self.rooms![indexPath.row].price
             tableCell.descriptionLabel.text = self.rooms![indexPath.row].title
             tableCell.placeLabel.text = self.rooms![indexPath.row].place
-            if rooms![indexPath.row].image != nil{
-                tableCell.firstImg.sd_setImage(with: URL(string: self.rooms![indexPath.item].image!))
-                
-            }
+            //            if rooms![indexPath.row].image != nil{
+            //                tableCell.firstImg.sd_setImage(with: URL(string: self.rooms![indexPath.item].image!))
+            //
+            //            }
         }
         return  tableCell
     }
@@ -108,7 +108,7 @@ extension HomeViewController{
     
     //MARK:- Handel The Rooms Response
     private func handelRoomsRequest(data:[RoomsModel]?,error:Error?){
-      
+        
         self.rooms = data
         DispatchQueue.main.async {
             self.homeTableView.reloadData()

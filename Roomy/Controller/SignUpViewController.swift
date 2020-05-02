@@ -12,7 +12,7 @@ import SVProgressHUD
 class SignUpViewController: UIViewController {
     
     //MARK:- Prrperties
-  
+    
     
     
     //MARK:- IBOutlets
@@ -61,14 +61,14 @@ class SignUpViewController: UIViewController {
     
     
     //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
-       override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-       {
-           if segue.identifier == "signUpToHome"
-           {
-               let vc = segue.destination as? HomeViewController
-               vc?.auth = sender as? Auth
-           }
-       }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "signUpToHome"
+        {
+            let vc = segue.destination as? HomeViewController
+            vc?.auth = sender as? Auth
+        }
+    }
     
 }
 
@@ -112,17 +112,17 @@ extension SignUpViewController{
     
     
     //MARK: - handel logIn
-      private func handelSignUp(sender:Auth?,error:Error?){
-          if sender != nil{
-              SVProgressHUD.dismiss()
-              DispatchQueue.main.async {
-                  self.performSegue(withIdentifier: "signUpToHome", sender: sender)
-              }
-          }else{
-              SVProgressHUD.dismiss()
-              DispatchQueue.main.async {
+    private func handelSignUp(sender:Auth?,error:Error?){
+        if sender != nil{
+            SVProgressHUD.dismiss()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "signUpToHome", sender: sender)
+            }
+        }else{
+            SVProgressHUD.dismiss()
+            DispatchQueue.main.async {
                 self.displayAlertMessage(userMessage: "Please write a valid Email!")
-              }
-          }
-      }
+            }
+        }
+    }
 }

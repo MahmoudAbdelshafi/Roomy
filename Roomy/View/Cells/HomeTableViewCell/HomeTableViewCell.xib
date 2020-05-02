@@ -21,13 +21,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="348" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-W2-AIP">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-W2-AIP">
                         <rect key="frame" x="92.5" y="61.5" width="80" height="84"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="83.666666666666657" id="ejp-hc-b4L"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room" translatesAutoresizingMaskIntoConstraints="NO" id="9Ln-Rh-O2W">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="room7" translatesAutoresizingMaskIntoConstraints="NO" id="9Ln-Rh-O2W">
                         <rect key="frame" x="176.5" y="61.5" width="80" height="84"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="fng-uC-VgQ"/>
@@ -80,7 +80,7 @@
                             <constraint firstAttribute="bottom" secondItem="26w-kF-u99" secondAttribute="bottom" constant="10" id="mKy-YP-bXM"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Room" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-H1-aEQ">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="room10" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-H1-aEQ">
                         <rect key="frame" x="262.5" y="61.5" width="80" height="84"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="szk-4f-TRw"/>
@@ -131,5 +131,7 @@
     </objects>
     <resources>
         <image name="Room" width="375" height="382"/>
+        <image name="room10" width="74" height="92"/>
+        <image name="room7" width="74" height="92"/>
     </resources>
 </document>
