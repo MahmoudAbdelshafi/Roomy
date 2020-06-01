@@ -1,7 +1,9 @@
 # Roomy
 
 
-# Buy a whole room in just one tap
+# Introduction
+
+Application for finding roomamtes online built using Swift 5 & IOS13
 
 
 
