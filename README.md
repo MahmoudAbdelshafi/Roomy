@@ -8,6 +8,19 @@
 Application for finding roomamtes online built using Swift 5 & IOS13
 
 
+## To-Do
+- [x] Launch Screen
+- [x] Landing Screen
+- [x] Registration of new users/ Login functionality.
+- [x] Rooms Screen
+- [x] Details Screen
+- [x] Signup Screen
+- [x] Sign Up API
+- [x] Sign In API
+- [x] Store Auth Token using keychain
+- [x] Get All Rooms API
+
+
 ### Start Screen
 <img src= "images/Start.png" width="250" > 
 
@@ -20,18 +33,6 @@ Application for finding roomamtes online built using Swift 5 & IOS13
 ### Details Screen
 <img src= "images/Info.png" width="250" >
 
-
-## To-Do
-- [x] Launch Screen
-- [x] Landing Screen
-- [x] Registration of new users/ Login functionality.
-- [x] Rooms Screen
-- [x] Details Screen
-- [x] Signup Screen
-- [x] Sign Up API
-- [x] Sign In API
-- [x] Store Auth Token using keychain
-- [x] Get All Rooms API
 
 
 
