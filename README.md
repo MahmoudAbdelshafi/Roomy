@@ -19,6 +19,7 @@ Application for finding roomamtes online built using Swift 5 & IOS13
 - [x] Sign In API
 - [x] Store Auth Token using keychain
 - [x] Get All Rooms API
+- [x] Add Realme Database
 
 
 ### Start Screen
