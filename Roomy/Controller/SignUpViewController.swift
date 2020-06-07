@@ -11,29 +11,21 @@ import SVProgressHUD
 
 class SignUpViewController: UIViewController {
     
-    //MARK:- Prrperties
+
     
     
     
     //MARK:- IBOutlets
-    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
-    
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         helper()
     }
-    
-    
-    
-    
-    
+   
     //MARK:-IBActions
     @IBAction func signUpPressed(_ sender: Any) {
         let email = EmailTextField.text
@@ -64,12 +56,6 @@ class SignUpViewController: UIViewController {
     }
     
 }
-
-
-
-
-
-
 
 //MARK:- Private
 extension SignUpViewController{

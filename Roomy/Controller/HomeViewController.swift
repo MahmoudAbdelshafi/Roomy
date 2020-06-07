@@ -25,10 +25,6 @@ class HomeViewController: UIViewController {
         request()
     }
     
-    
-    
-    
-    
     //MARK:- Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {

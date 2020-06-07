@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roomy" translatesAutoresizingMaskIntoConstraints="NO" id="k2s-N0-HmU">
-                                <rect key="frame" x="34" y="230" width="346" height="106"/>
+                                <rect key="frame" x="120.66666666666669" y="155" width="173" height="53"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="r7G-Bq-Y9X">
                                 <rect key="frame" x="0.0" y="477" width="414" height="420"/>
@@ -31,10 +31,10 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder copy" translatesAutoresizingMaskIntoConstraints="NO" id="quy-mI-tR7">
-                                <rect key="frame" x="132" y="50" width="150" height="150"/>
+                                <rect key="frame" x="169.66666666666666" y="50" width="75" height="75"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your roomate today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOq-Td-NcL">
-                                <rect key="frame" x="36" y="346" width="342" height="22"/>
+                                <rect key="frame" x="36" y="218" width="342" height="22"/>
                                 <fontDescription key="fontDescription" name="Calibri" family="Calibri" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -570,6 +570,9 @@
             <point key="canvasLocation" x="2174" y="82"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="k3C-65-6t0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Gmail" width="77" height="77"/>
         <image name="LinkedIn" width="77" height="77"/>
@@ -577,12 +580,9 @@
         <image name="Room" width="375" height="382"/>
         <image name="Roomy" width="173" height="53"/>
         <image name="Twitter" width="77" height="77"/>
-        <image name="backward.end" catalog="system" width="64" height="60"/>
+        <image name="backward.end" catalog="system" width="128" height="120"/>
         <image name="facebook" width="77" height="77"/>
         <image name="placeholder copy" width="75" height="75"/>
-        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="k3C-65-6t0"/>
-    </inferredMetricsTieBreakers>
 </document>

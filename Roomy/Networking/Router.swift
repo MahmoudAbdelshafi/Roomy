@@ -48,7 +48,6 @@ class Router{
             }
         }
         
-        
         //MARK:- URLRequest Method
         func asURLRequest(httpBodyForSignIn:LogInModel?,httpBodyForSignUp:SignUpModel?, _ auth:String?) throws -> URLRequest{
             var urlRequest = URLRequest(url: url)
@@ -66,8 +65,6 @@ class Router{
             case .getRooms:
                 return urlRequest
             }
-            
-         
         }
     }
     

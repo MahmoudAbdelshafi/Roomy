@@ -14,12 +14,8 @@ class SignInViewController: UIViewController {
     
     //MARK:- Properties
     var auth_Key:Auth?
-    
-    
-    
-    
+   
     //MARK:- Outlets
-    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
@@ -29,9 +25,6 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         helper()
     }
-    
-    
-    
     
     // MARK:- IBActions
     @IBAction func signUpPressed(_ sender: Any) {
