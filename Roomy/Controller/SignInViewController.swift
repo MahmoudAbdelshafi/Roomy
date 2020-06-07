@@ -24,10 +24,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    
-    
-    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         helper()
     }
@@ -52,16 +50,12 @@ class SignInViewController: UIViewController {
         case password?.isEmpty: displayAlertMessage("Enter Password")
             
         //LogIn
-        default:SVProgressHUD.show(); LogIn.signIn(email: username!, password: password!, completionHandler: self.handelLogIn(sender:error:))
+        default:SVProgressHUD.show(); Authentication.signIn(email: username!, password: password!, completionHandler: self.handelLogIn(sender:error:))
             
         }
     }
     
-    
-    
-    
     //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "logInToHome"
@@ -72,14 +66,6 @@ class SignInViewController: UIViewController {
     }
     
 }
-
-
-
-
-
-
-
-
 
 //MARK:- Private Functions
 extension SignInViewController{
@@ -92,15 +78,12 @@ extension SignInViewController{
         self.hideKeyboardWhenTappedAround()
     }
     
-    
     //MARK: - SignIn Button Customization
     private func buttonShape(){
         signInButton.layer.borderColor = signInButton.backgroundColor?.cgColor
         signInButton.layer.borderWidth  = 1.0
         signInButton.layer.cornerRadius = 30.0
     }
-    
-    
     
     //MARK: - handel logIn
     private func handelLogIn(sender:Auth?,error:Error?){
@@ -116,8 +99,6 @@ extension SignInViewController{
             }
         }
     }
-    
-    
     
     //MARK:- Alert Message
     private func displayAlertMessage(_ userMessage:String){

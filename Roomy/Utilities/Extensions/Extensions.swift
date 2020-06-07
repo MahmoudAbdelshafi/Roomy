@@ -11,8 +11,6 @@ import UIKit
 
 
 //MARK: - Dismess Keyboard
-
-
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
@@ -25,13 +23,8 @@ extension UIViewController {
     }
 }
 
-
-
-
-
 //MARK:- Text Field Customizatio
 extension UITextField{
-    
  func underlined(){
         let border = CALayer()
         let width = CGFloat(1.0)
@@ -41,6 +34,4 @@ extension UITextField{
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
-    
-    
 }

@@ -16,11 +16,7 @@ let password:String
 
 struct Auth:Codable {
     let token:String
-
-    
     enum CodingKeys: String,CodingKey{
         case token = "auth_token"
-  
     }
-    
 }

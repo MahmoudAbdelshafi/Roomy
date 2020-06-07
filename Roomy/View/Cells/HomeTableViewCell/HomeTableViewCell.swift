@@ -11,15 +11,12 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
 
     //MARK:- IBOutlets
-   
     @IBOutlet weak var firstImg: UIImageView!
     @IBOutlet weak var secondImg: UIImageView!
     @IBOutlet weak var thirdImg: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

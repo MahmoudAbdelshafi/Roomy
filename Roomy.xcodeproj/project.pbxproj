@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		390375FA244C94F500202C39 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390375F9244C94F500202C39 /* Extensions.swift */; };
-		390A17A52434DA6100B79F27 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A17A42434DA6100B79F27 /* LogIn.swift */; };
+		390A17A52434DA6100B79F27 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390A17A42434DA6100B79F27 /* Authentication.swift */; };
 		390AA3F12415A0150072BEC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390AA3F02415A0150072BEC6 /* AppDelegate.swift */; };
 		390AA3F82415A0150072BEC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390AA3F62415A0150072BEC6 /* Main.storyboard */; };
 		390AA3FA2415A0180072BEC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 390AA3F92415A0180072BEC6 /* Assets.xcassets */; };
@@ -18,7 +18,6 @@
 		391A4456243BB59600EDFE59 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A4455243BB59600EDFE59 /* Rooms.swift */; };
 		391BE7BB244F12DE00631D38 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */; };
 		3932ED61245099D9006F8F6E /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3932ED60245099D9006F8F6E /* SignUpModel.swift */; };
-		393338042448D98400070602 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393338032448D98400070602 /* SignUp.swift */; };
 		3943F297244F574600FB56FD /* RealmManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3943F296244F574600FB56FD /* RealmManger.swift */; };
 		3977BA1A24165002008096AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3977BA1924165002008096AD /* HomeViewController.swift */; };
 		3977BA1C24165D97008096AD /* calibri in Resources */ = {isa = PBXBuildFile; fileRef = 3977BA1B24165D96008096AD /* calibri */; };
@@ -33,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		390375F9244C94F500202C39 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		390A17A42434DA6100B79F27 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		390A17A42434DA6100B79F27 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		390AA3ED2415A0150072BEC6 /* Roomy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roomy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		390AA3F02415A0150072BEC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		390AA3F72415A0150072BEC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +44,6 @@
 		391A4455243BB59600EDFE59 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		391BE7B9244F12DE00631D38 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		3932ED60245099D9006F8F6E /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
-		393338032448D98400070602 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		3943F296244F574600FB56FD /* RealmManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManger.swift; sourceTree = "<group>"; };
 		3977BA1924165002008096AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3977BA1B24165D96008096AD /* calibri */ = {isa = PBXFileReference; lastKnownFileType = folder; path = calibri; sourceTree = "<group>"; };
@@ -136,11 +134,11 @@
 		390AA4092415C2C60072BEC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				39B484E2243DE3860083008B /* ViewController.swift */,
-				390AA40A2415C3470072BEC6 /* SignInViewController.swift */,
 				3977BA1924165002008096AD /* HomeViewController.swift */,
 				39E8A44E2416F32200F9CD72 /* ListingViewController.swift */,
+				390AA40A2415C3470072BEC6 /* SignInViewController.swift */,
 				39B484E4243DE8050083008B /* SignUpViewController.swift */,
+				39B484E2243DE3860083008B /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,10 +190,9 @@
 		39782DFE243CEB55007113A0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				39A119CE244DE824004FC1D7 /* Router.swift */,
-				390A17A42434DA6100B79F27 /* LogIn.swift */,
-				393338032448D98400070602 /* SignUp.swift */,
+				390A17A42434DA6100B79F27 /* Authentication.swift */,
 				391A4455243BB59600EDFE59 /* Rooms.swift */,
+				39A119CE244DE824004FC1D7 /* Router.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -347,8 +344,7 @@
 				390AA40B2415C3470072BEC6 /* SignInViewController.swift in Sources */,
 				39A119CF244DE824004FC1D7 /* Router.swift in Sources */,
 				3977BA1A24165002008096AD /* HomeViewController.swift in Sources */,
-				393338042448D98400070602 /* SignUp.swift in Sources */,
-				390A17A52434DA6100B79F27 /* LogIn.swift in Sources */,
+				390A17A52434DA6100B79F27 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

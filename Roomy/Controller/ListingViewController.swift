@@ -21,19 +21,15 @@ class ListingViewController: UIViewController {
         
         buttonShape()
         if room != nil{
-            descriptionLabel.text = room?.roomDescription
+        descriptionLabel.text = room?.roomDescription
         }
-        
-        
     }
-    
     
     //MARK:- IBActions
     @IBAction func dismissPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
+
    //MARK:- Button Customize
     func buttonShape(){
         infoButton.layer.borderColor = infoButton.backgroundColor?.cgColor
@@ -41,9 +37,6 @@ class ListingViewController: UIViewController {
         infoButton.layer.cornerRadius = 25.0
         }
   
-    
-    
-    
-    
+   
     
 }

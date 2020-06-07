@@ -8,14 +8,10 @@
 
 import Foundation
 class Router{
-    
-    
     enum Endpoint:String{
-        
         case signIn
         case signUp
         case getRooms
-        
         
         var url:URL {
             switch self {

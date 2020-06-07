@@ -45,21 +45,14 @@ class SignUpViewController: UIViewController {
         }else{
             //SignUp
             SVProgressHUD.show()
-            SignUp.signUp(username!, email!, password!, completionHandler: handelSignUp(sender:error:))
+            Authentication.signUp(username!, email!, password!, completionHandler: handelSignUp(sender:error:))
         }
-        
     }
-    
-    
     
     @IBAction func logInPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
+   
     //MARK: - Prepare For HomeViewController Segue And Passing Auth_Token
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -79,18 +72,14 @@ class SignUpViewController: UIViewController {
 
 
 //MARK:- Private
-
 extension SignUpViewController{
-    
-    
     //MARK: - SignUp Button Customization
     private func buttonShape(){
         signUpButton.layer.borderColor = signUpButton.backgroundColor?.cgColor
         signUpButton.layer.borderWidth  = 1.0
         signUpButton.layer.cornerRadius = 30.0
     }
-    
-    
+
     //MARK:- Helpers
     private func helper(){
         buttonShape()
@@ -100,7 +89,6 @@ extension SignUpViewController{
         hideKeyboardWhenTappedAround()
     }
     
-    
     //MARK:- Alert Message
     private func displayAlertMessage(userMessage:String){
         let myAlert = UIAlertController(title: userMessage, message: nil, preferredStyle: .alert)
@@ -109,7 +97,6 @@ extension SignUpViewController{
         myAlert.addAction(okAction)
         self.present(myAlert,animated: true)
     }
-    
     
     //MARK: - handel logIn
     private func handelSignUp(sender:Auth?,error:Error?){
