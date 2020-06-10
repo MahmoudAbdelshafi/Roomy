@@ -46,7 +46,7 @@ Application for finding roomamtes online built using Swift 5 & IOS13
 
 ## Meta
 
-Mahmoud Abdelshafi – mahmoudabdelshafi4@gmail.com
+Mahmoud Abdelshafi. – mahmoudabdelshafi4@gmail.com
 
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg?style=flat
